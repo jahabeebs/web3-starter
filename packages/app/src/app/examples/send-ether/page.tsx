@@ -52,7 +52,7 @@ export default function SendEther() {
   const handleToAdressInput = (to: string) => {
     if (to.startsWith('0x')) setTo(to as `0x${string}`)
     else setTo(`0x${to}`)
-    setIsValidToAddress(ethers.utils.isAddress(to))
+    setIsValidToAddress(ethers.isAddress(to))
   }
 
   useEffect(() => {

@@ -1,6 +1,6 @@
-import { mainnet, sepolia, polygon, optimism, arbitrum, Chain, hardhat } from 'viem/chains'
+import { mainnet, sepolia, polygon, optimism, arbitrum, Chain, hardhat, arbitrumSepolia } from 'viem/chains'
 
-let chains = [mainnet, sepolia, polygon, optimism, arbitrum] as [Chain, ...Chain[]]
+let chains = [mainnet, sepolia, polygon, optimism, arbitrum, arbitrumSepolia] as [Chain, ...Chain[]]
 
 if (process.env.NODE_ENV !== 'production') chains.push(hardhat)
 
@@ -11,6 +11,7 @@ export function GetNetworkColor(chain?: string) {
   if (chain === 'arbitrum') return 'blue'
   if (chain === 'optimism') return 'red'
   if (chain === 'matic') return 'purple'
+  if (chain === 'arbitrumSepolia') return 'yellow'
 
   return 'grey'
 }
