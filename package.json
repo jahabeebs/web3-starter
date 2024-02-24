@@ -1,0 +1,14 @@
+{
+  "name": "nexth",
+  "version": "0.2.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces -pt run dev",
+    "build": "yarn workspaces -pt run build",
+    "test": "yarn workspaces -pt run test"
+  }
+}
