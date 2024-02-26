@@ -55,6 +55,23 @@ export default function SendEther() {
     setIsValidToAddress(ethers.isAddress(to))
   }
 
+  // Buggy!
+  // useEffect(() => {
+  //   if (txSuccess) {
+  //     showToast(`Transaction successful`, {
+  //       type: 'success',
+  //     })
+  //     if (balance.data) {
+  //       balance.refetch();
+  //     }
+  //   } else if (txError) {
+  //     showToast(`Transaction failed: ${txError.cause}`, {
+  //       type: 'error',
+  //     })
+  //   }
+  // }, [txSuccess, txError, balance.data])
+
+  // Correct!
   useEffect(() => {
     if (txSuccess) {
       showToast(`Transaction successful`, {
